@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1 介绍 · GitBook</title>
+        <title>5 HDFS操作--使用javaAPI · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -89,8 +89,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../section2/" />
     
+    <link rel="prev" href="../section4/" />
     
 
     </head>
@@ -146,9 +146,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="./">
+        <li class="chapter " data-level="1.2.1" data-path="../../chapter1/section1/">
             
-                <a href="./">
+                <a href="../../chapter1/section1/">
             
                     
                     1 介绍
@@ -159,9 +159,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../section2/">
+        <li class="chapter " data-level="1.2.2" data-path="../../chapter1/section2/">
             
-                <a href="../section2/">
+                <a href="../../chapter1/section2/">
             
                     
                     2 安装与集群
@@ -172,9 +172,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="../section3/">
+        <li class="chapter " data-level="1.2.3" data-path="../../chapter1/section3/">
             
-                <a href="../section3/">
+                <a href="../../chapter1/section3/">
             
                     
                     3 集群启动
@@ -204,9 +204,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../../chapter2/section1/">
+        <li class="chapter " data-level="1.3.1" data-path="../section1/">
             
-                <a href="../../chapter2/section1/">
+                <a href="../section1/">
             
                     
                     1 硬盘及存储架构
@@ -217,9 +217,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../../chapter2/section2/">
+        <li class="chapter " data-level="1.3.2" data-path="../section2/">
             
-                <a href="../../chapter2/section2/">
+                <a href="../section2/">
             
                     
                     2 模拟分布式文件存储
@@ -230,9 +230,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../../chapter2/section3/">
+        <li class="chapter " data-level="1.3.3" data-path="../section3/">
             
-                <a href="../../chapter2/section3/">
+                <a href="../section3/">
             
                     
                     3 hadoop分布式文件系统
@@ -243,9 +243,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../../chapter2/section4/">
+        <li class="chapter " data-level="1.3.4" data-path="../section4/">
             
-                <a href="../../chapter2/section4/">
+                <a href="../section4/">
             
                     
                     4 HDFS操作--使用shell命令
@@ -256,9 +256,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="../../chapter2/section5/">
+        <li class="chapter active" data-level="1.3.5" data-path="./">
             
-                <a href="../../chapter2/section5/">
+                <a href="./">
             
                     
                     5 HDFS操作--使用javaAPI
@@ -304,7 +304,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >1 介绍</a>
+        <a href="../.." >5 HDFS操作--使用javaAPI</a>
     </h1>
 </div>
 
@@ -319,22 +319,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="hadoop&#x4ECB;&#x7ECD;">Hadoop&#x4ECB;&#x7ECD;</h1>
-<ol>
-<li><strong>&#x72ED;&#x4E49;</strong>: apache&#x7684;&#x4E00;&#x6B3E;&#x5F00;&#x6E90;&#x8F6F;&#x4EF6;,&#x5B9E;&#x8D28;&#x4E0A;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957;&#x5F00;&#x6E90;&#x6846;&#x67B6;/&#x5E73;&#x53F0;,&#x6765;<strong>&#x5B58;&#x50A8;</strong>&#x548C;<strong>&#x4F7F;&#x7528;</strong>&#x5927;&#x6570;&#x636E;&#x3002;</li>
-</ol>
-<p><strong>&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;</strong></p>
+                                <h1 id="hdfs&#x64CD;&#x4F5C;--&#x4F7F;&#x7528;javaapi">HDFS&#x64CD;&#x4F5C;--&#x4F7F;&#x7528;javaAPI</h1>
+<h2 id="1-&#x5BA2;&#x6237;&#x7AEF;&#x6838;&#x5FC3;&#x7C7B;">1 &#x5BA2;&#x6237;&#x7AEF;&#x6838;&#x5FC3;&#x7C7B;</h2>
 <ul>
-<li>Hadoop Distributed File System (HDFS)&#xFF1A;&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#xFF0C;&#x89E3;&#x51B3;&#x6D77;&#x91CF;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x3002;</li>
-<li>Hadoop YARN &#xFF1A;&#x96C6;&#x7FA4;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x548C;&#x4EFB;&#x52A1;&#x8C03;&#x8BD5;&#x6846;&#x67B6;&#xFF0C;&#x89E3;&#x51B3;&#x8D44;&#x6E90;&#x4EFB;&#x52A1;&#x8C03;&#x8BD5;&#x3002;</li>
-<li><p>Hadoop MapReduce&#xFF1A;&#x5206;&#x5E03;&#x5F0F;&#x8BA1;&#x7B97;&#x6846;&#x67B6;&#xFF0C;&#x89E3;&#x51B3;&#x6D77;&#x91CF;&#x6570;&#x636E;&#x8BA1;&#x7B97;&#x3002;</p>
-</li>
-<li><p><strong>&#x5E7F;&#x4E49;</strong>&#xFF1A;&#x56F4;&#x7ED5;Hadoop&#x6253;&#x9020;&#x7684;&#x5927;&#x6570;&#x636E;&#x751F;&#x6001;&#x5708;&#x3002;</p>
-</li>
+<li>Configuration&#x914D;&#x7F6E;&#x5BF9;&#x8C61;&#x7C7B;&#xFF0C;&#x7528;&#x4E8E;&#x52A0;&#x8F7D;&#x6216;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x5C5E;&#x6027;&#x3002;</li>
+<li>FileSystem&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5BF9;&#x8C61;&#x57FA;&#x7C7B;&#xFF0C;&#x4E0D;&#x540C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6709;&#x4E0D;&#x540C;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#xFF0C;&#x8BE5;&#x8D85;&#x7C7B;&#x5C01;&#x88C5;&#x4E86;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x76F8;&#x5173;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#x3002; </li>
 </ul>
-<p><img src="media/1.png" alt=""> </p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; qgao 2021-* all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-04-25 16:16:26
+2022-04-26 16:05:11
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -363,10 +355,10 @@
 
             
                 
-                
-                <a href="../section2/" class="navigation navigation-next navigation-unique" aria-label="Next page: 2 安装与集群">
-                    <i class="fa fa-angle-right"></i>
+                <a href="../section4/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 4 HDFS操作--使用shell命令">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -375,7 +367,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1 介绍","level":"1.2.1","depth":2,"next":{"title":"2 安装与集群","level":"1.2.2","depth":2,"path":"chapter1/section2/index.md","ref":"chapter1/section2/index.md","articles":[]},"previous":{"title":"Hadoop介绍与集群","level":"1.2","depth":1,"ref":"","articles":[{"title":"1 介绍","level":"1.2.1","depth":2,"path":"chapter1/section1/index.md","ref":"chapter1/section1/index.md","articles":[]},{"title":"2 安装与集群","level":"1.2.2","depth":2,"path":"chapter1/section2/index.md","ref":"chapter1/section2/index.md","articles":[]},{"title":"3 集群启动","level":"1.2.3","depth":2,"path":"chapter1/section3/index.md","ref":"chapter1/section3/index.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup","expandable-chapters","-sharing","sharing-plus","page-toc-button"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy qgao 2021-*","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; qgao 2021-*","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":4,"minTocSize":2},"back-to-top-button":{},"sharing":{"douban":true,"facebook":true,"google":true,"qq":true,"twitter":true,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/section1/index.md","mtime":"2022-04-25T08:16:26.283Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-27T04:40:09.741Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5 HDFS操作--使用javaAPI","level":"1.3.5","depth":2,"previous":{"title":"4 HDFS操作--使用shell命令","level":"1.3.4","depth":2,"path":"chapter2/section4/index.md","ref":"chapter2/section4/index.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup","expandable-chapters","-sharing","sharing-plus","page-toc-button"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy qgao 2021-*","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"collapsed":false,"copyright":"Copyright &#169; qgao 2021-*","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{"maxTocDepth":4,"minTocSize":2},"back-to-top-button":{},"sharing":{"douban":true,"facebook":true,"google":true,"qq":true,"twitter":true,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section5/index.md","mtime":"2022-04-26T08:05:11.808Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-27T04:40:09.741Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
